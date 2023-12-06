@@ -23,12 +23,12 @@ spec:
     spec: |
       predictor:
         imagePullSecrets:
-          - name: felixdockersecrect
+          - name: dockerpk
         minReplicas: 1
         maxReplicas: 5
         containers:
         - name: kserve-container
-          image: docker.io/bfwork/huggingcore-customgpu
+          image: docker.io/purankhoeval/llama2-on-ai-core:01
           ports:
             - containerPort: 8080
               protocol: TCP
